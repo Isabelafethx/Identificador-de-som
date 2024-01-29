@@ -5,11 +5,13 @@ function startClassification()
 }
 
 function modelReady(){
-    classifier.classify(gotResults);
+    classifier.classify(gotResult);
 }
 
-function gotResults(error, results) {
+function gotResult(error, results) {
     if (error) {
+        console.error(error);
+     } else { 
      console.log(results);
      random_number_r = Math.floor(Math.random() * 255) + 1;
      random_number_g = Math.floor(Math.random() * 255) + 1;
